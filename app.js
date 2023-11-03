@@ -33,6 +33,10 @@ app.use('/api/auth', authRoute)
 app.use('/api/user', userRoute)
 app.use('/api/post', blogPostRoute)
 
+app.get('/', (req, res) => {
+  res.send('Backend functional!')
+})
+
 app.listen(8080, () => {
   console.log('port is functional on port 8080')
 })
