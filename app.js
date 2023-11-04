@@ -18,6 +18,7 @@ app.use(
 )
 app.use(express.json())
 app.use('/images', express.static('images'))
+app.set('trust proxy', true)
 
 mongoose
   .connect(process.env.MONGO_URL, {
